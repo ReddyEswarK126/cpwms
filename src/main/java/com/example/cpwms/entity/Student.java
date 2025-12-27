@@ -4,7 +4,16 @@ import com.example.cpwms.enums.StudentStatus;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "students")
+@Table(
+        name = "students",
+        indexes = {
+                @Index(name = "idx_student_batch", columnList = "batch_year")
+        },
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "email")
+        }
+)
+
 public class Student {
 
     @Id

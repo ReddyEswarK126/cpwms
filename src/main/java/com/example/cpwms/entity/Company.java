@@ -3,7 +3,13 @@ package com.example.cpwms.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "companies")
+@Table(
+        name = "companies",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "name")
+        }
+)
+
 public class Company {
 
     @Id
