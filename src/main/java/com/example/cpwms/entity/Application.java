@@ -4,13 +4,7 @@ import com.example.cpwms.enums.ApplicationState;
 import jakarta.persistence.*;
 
 @Entity
-@Table(
-        name = "applications",
-        uniqueConstraints = {
-                @UniqueConstraint(columnNames = {"student_id", "job_role_id"})
-        }
-)
-
+@Table(name = "applications")
 public class Application {
 
     @Id

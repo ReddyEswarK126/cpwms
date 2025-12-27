@@ -3,13 +3,7 @@ package com.example.cpwms.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(
-        name = "job_roles",
-        indexes = {
-                @Index(name = "idx_job_company", columnList = "company_id")
-        }
-)
-
+@Table(name = "job_roles")
 public class JobRole {
 
     @Id
